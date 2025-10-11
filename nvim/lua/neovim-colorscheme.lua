@@ -1,14 +1,25 @@
-require("solarized-osaka").setup({
-  transparent = true,
-  terminal_colors = true,
-  styles = {
-    comments = { italic = true },
-    keywords = { italic = true },
-    functions = { bold = true },
-    variables = {},
+-- Default options:
+require("gruvbox").setup({
+  terminal_colors = true, -- add neovim terminal colors
+  undercurl = true,
+  underline = true,
+  bold = true,
+  italic = {
+    strings = true,
+    emphasis = true,
+    comments = true,
+    operators = false,
+    folds = true,
   },
-  on_colors = function(colors) end,
-  on_highlights = function(highlights, colors) end,
+  strikethrough = true,
+  invert_selection = false,
+  invert_signs = false,
+  invert_tabline = false,
+  inverse = true, -- invert background for search, diffs, statuslines and errors
+  contrast = "", -- can be "hard", "soft" or empty string
+  palette_overrides = {},
+  overrides = {},
+  dim_inactive = false,
+  transparent_mode = false,
 })
-vim.cmd.colorscheme("solarized-osaka")
-
+vim.cmd("colorscheme gruvbox")

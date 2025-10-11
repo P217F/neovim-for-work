@@ -18,7 +18,6 @@ vim.opt.timeoutlen = 180
 vim.opt.updatetime = 15
 vim.opt.mouse = "a"
 vim.opt.clipboard = "unnamedplus"
-vim.g.mapleader = " "
 vim.keymap.set('n', '<F1>', ':enew<CR>')
 vim.keymap.set('n', '<F2>', ':e ')
 vim.keymap.set('n', '<F3>', ':w<CR>')

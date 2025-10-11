@@ -18,7 +18,7 @@ Plug 'nvim-tree/nvim-web-devicons'
 
 Plug 'akinsho/bufferline.nvim'
 
-Plug 'craftzdog/solarized-osaka.nvim'
+Plug 'ellisonleao/gruvbox.nvim'
 
 Plug 'nvzone/floaterm'
 Plug 'nvzone/volt'  " Dependencies of floaterm

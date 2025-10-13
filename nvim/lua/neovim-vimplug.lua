@@ -27,7 +27,19 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
+
 Plug 'L3MON4D3/LuaSnip'
+
+Plug 'folke/noice.nvim'
+Plug 'MunifTanjim/nui.nvim'
+
+Plug 'rcarriga/nvim-notify'
+
+Plug 'stevearc/aerial.nvim'
+
+Plug 'ThePrimeagen/refactoring.nvim'
+
+Plug 'folke/which-key.nvim'
 
 call plug#end()
 ]])

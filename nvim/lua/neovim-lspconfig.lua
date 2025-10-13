@@ -86,7 +86,7 @@ vim.diagnostic.config({
     },
   },
   virtual_text = {
-    prefix = "",
+    prefix = "",  -- hoặc tắt: prefix = ""
   },
   underline = true,
   update_in_insert = false,

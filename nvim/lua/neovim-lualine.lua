@@ -222,6 +222,7 @@ local function mode()
 end
 
 local config = {
+  globalStatus = true,
   options = {
     component_separators = '',
     section_separators = '',

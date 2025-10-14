@@ -1,7 +1,7 @@
 require("aerial").setup({
   backends = { "lsp", "treesitter" },
   layout = {
-    min_width = 28,
+    min_width = 26,
     default_direction = "right",
   },
   show_guides = true,
@@ -11,4 +11,4 @@ require("aerial").setup({
     Variable = "",
   },
 })
-vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>")
+vim.keymap.set("n", "<F1>", "<cmd>AerialToggle!<CR>")

@@ -30,4 +30,3 @@ require("nvim-tree").setup({
   },
 })
 
-vim.keymap.set('n', '<F5>', ':NvimTreeToggle<CR>', { noremap=true, silent=true })

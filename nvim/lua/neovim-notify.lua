@@ -22,6 +22,6 @@ notify.setup({
 vim.notify = notify
 
 -- Keymap
-vim.keymap.set("n", "<leader>nn", function()
+vim.keymap.set("n", "nn", function()
   require("notify").history()
 end, { desc = "Notification History", noremap = true, silent = true })

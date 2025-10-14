@@ -26,14 +26,9 @@ vim.opt.laststatus = 3
 vim.g.mapleader = " "
 
 -- Keymap
-vim.keymap.set('n', '<F1>', ':enew<CR>')
-vim.keymap.set('n', '<F2>', ':e ')
-vim.keymap.set('n', '<F3>', ':w<CR>')
-vim.keymap.set('n', '<F3><F3>', ':wq!<CR>')
 vim.keymap.set('n', '<F4>', '/')
 vim.keymap.set('n', '<F4><F4>', ':Telescope find_files<CR>')
-vim.keymap.set('n', 'q', ':q<CR>')
-vim.keymap.set('n', 'qq',':q!<CR>')
+vim.keymap.set('n', '<F5>', ':NvimTreeToggle<CR>', { noremap=true, silent=true })
 vim.keymap.set('n', '<F9>', ':FloatermToggle<CR>')
 
 -- Require plugins
@@ -45,11 +40,8 @@ require("neovim-floaterm")
 require("neovim-lspconfig")
 require("neovim-lualine")
 require("neovim-nvim-cmp")
-require("neovim-noice")
 require("neovim-notify")
-require("neovim-refactoring")
-require("neovim-tree-folder")
+require("neovim-nvim-tree")
 require("neovim-telescope")
 require("neovim-treesitter")
 require("neovim-vimplug")
-require("neovim-which-key")

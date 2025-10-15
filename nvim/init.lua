@@ -16,7 +16,7 @@ vim.opt.smartcase = true
 vim.opt.incsearch = true
 vim.opt.hlsearch = true
 vim.opt.timeoutlen = 180
-vim.opt.updatetime = 15
+vim.opt.updatetime = 20
 vim.opt.mouse = "a"
 vim.opt.clipboard = "unnamedplus"
 vim.opt.fillchars = { eob=" " }
@@ -24,24 +24,27 @@ vim.opt.shortmess:append("sI")
 vim.opt.whichwrap:append("<,>,[,],h,l")
 vim.opt.laststatus = 3
 vim.g.mapleader = " "
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+vim.opt.termguicolors = true
 
 -- Keymap
-vim.keymap.set('n', '<F4>', '/')
-vim.keymap.set('n', '<F4><F4>', ':Telescope find_files<CR>')
+vim.keymap.set('n', '<F2>', '/')
+vim.keymap.set('n', '<F3>', ':Telescope find_files<CR>')
 vim.keymap.set('n', '<F5>', ':NvimTreeToggle<CR>', { noremap=true, silent=true })
 vim.keymap.set('n', '<F9>', ':FloatermToggle<CR>')
 
 -- Require plugins
+require("neovim-vimplug")
 require("neovim-aerial")
 require("neovim-autopairs")
 require("neovim-bufferlines")
 require("neovim-colorscheme")
-require("neovim-floaterm")
 require("neovim-lspconfig")
 require("neovim-lualine")
 require("neovim-nvim-cmp")
 require("neovim-notify")
 require("neovim-nvim-tree")
 require("neovim-telescope")
+require("neovim-toggleterm")
 require("neovim-treesitter")
-require("neovim-vimplug")

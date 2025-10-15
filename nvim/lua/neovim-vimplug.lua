@@ -20,8 +20,7 @@ Plug 'akinsho/bufferline.nvim'
 
 Plug 'ellisonleao/gruvbox.nvim'
 
-Plug 'nvzone/floaterm'
-Plug 'nvzone/volt'
+Plug 'akinsho/toggleterm.nvim'
 
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'

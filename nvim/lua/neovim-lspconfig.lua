@@ -51,14 +51,6 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
-vim.diagnostic.config({
-  virtual_text = true,
-  signs = true,
-  underline = true,
-  update_in_insert = false,
-  severity_sort = true,
-})
-
 vim.api.nvim_create_autocmd("CursorHold", {
   callback = function()
     vim.diagnostic.open_float(nil, {
@@ -77,6 +69,7 @@ local signs = {
 }
 
 vim.diagnostic.config({
+  virtual_text = false,
   signs = {
     text = {
       [vim.diagnostic.severity.ERROR] = " ",
@@ -85,9 +78,10 @@ vim.diagnostic.config({
       [vim.diagnostic.severity.INFO]  = " ",
     },
   },
-  virtual_text = {
-    prefix = "",  -- hoặc tắt: prefix = ""
-  },
+  --[[virtual_text = {
+    prefix = "",
+  },]]
   underline = true,
   update_in_insert = false,
+    severity_sort = true,
 })

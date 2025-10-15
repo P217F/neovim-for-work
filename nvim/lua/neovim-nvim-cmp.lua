@@ -10,12 +10,11 @@ cmp.setup({
     ['<CR>']   = cmp.mapping.confirm({ select = true }),
     ['<Down>'] = cmp.mapping.select_next_item(),
     ['<Up>']   = cmp.mapping.select_prev_item(),
-    ['<Right>'] = cmp.mapping.confirm({ select = true }),
-    ['<Left>']  = cmp.mapping.abort(),
   }),
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
     { name = 'buffer' },
     { name = 'path' },
+    { name = 'luasnip' },
   })
 })

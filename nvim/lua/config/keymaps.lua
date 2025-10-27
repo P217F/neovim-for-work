@@ -1,5 +1,10 @@
 -- Keymap
-vim.keymap.set('n', '<F2>', '/')
-vim.keymap.set('n', '<F3>', ':Telescope find_files<CR>')
+vim.keymap.set("n", "<F1>", "<cmd>AerialToggle!<CR>", { noremap=true, silent=true })
+vim.keymap.set('n', '<F2>', '/', { noremap=true, silent=true })
+vim.keymap.set('n', '<F3>', ':Telescope find_files<CR>', { noremap=true, silent=true })
 vim.keymap.set('n', '<F5>', ':NvimTreeToggle<CR>', { noremap=true, silent=true })
-vim.keymap.set('n', '<F9>', ':FloatermToggle<CR>')
+vim.keymap.set('n', '<F7>', ':sp<CR>', { noremap=true, silent=true })
+vim.keymap.set('n', '<F8>', ':vs<CR>', { noremap=true, silent=true })
+vim.keymap.set('n', '<F9>', ':FloatermToggle<CR>', { noremap=true, silent=true })
+vim.keymap.set('n', 'q', ':q<CR>', { noremap=true, silent=true })
+vim.keymap.set('n', 'qq', ':q!<CR>', { noremap=true, silent=true })

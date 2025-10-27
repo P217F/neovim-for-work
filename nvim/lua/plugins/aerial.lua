@@ -15,7 +15,6 @@ return {
         Variable = "",
       },
     })
-    vim.keymap.set("n", "<F1>", "<cmd>AerialToggle!<CR>")
   end,
 }
 

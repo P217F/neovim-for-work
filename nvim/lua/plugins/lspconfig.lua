@@ -2,7 +2,7 @@ return {
   "neovim/nvim-lspconfig",
   event = { "BufReadPre", "BufNewFile" },
   dependencies = {
-    "hrsh7th/cmp-nvim-lsp",      -- LSP source for nvim-cmp
+    "hrsh7th/cmp-nvim-lsp",
   },
   config = function()
     local capabilities = require('cmp_nvim_lsp').default_capabilities()

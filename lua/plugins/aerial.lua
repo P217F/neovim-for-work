@@ -5,7 +5,7 @@ return {
     require("aerial").setup({
       backends = { "lsp", "treesitter" },
       layout = {
-        min_width = 26,
+        min_width = 22,
         default_direction = "right",
       },
       show_guides = true,

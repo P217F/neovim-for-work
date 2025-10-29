@@ -19,7 +19,7 @@ return {
     dashboard.section.buttons.val = {
       dashboard.button("F3","󰈞  Show Telescope Fuzzy Finder", ":Telescope find_files<CR>"),
       dashboard.button("F5","󰙅  Show NvimTree", ":NvimTreeToggle<CR>"),
-      dashboard.button("F9","  Open Terminal", ":terminal<CR>"),
+      dashboard.button("F9","  Open Terminal", ":ToggleTerm<CR>"),
       dashboard.button("q","󰅚  Quit", ":qa<CR>"),
       dashboard.button("qq","  Force Quit (no save)", ":qa!<CR>"),
     }

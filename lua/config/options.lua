@@ -26,3 +26,25 @@ vim.opt.termguicolors = true
 vim.g.mapleader = " "
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
+-- Saved notify
+local write_failed = false
+vim.api.nvim_create_autocmd("BufWritePre", {
+  callback = function()
+    write_failed = false
+  end,
+})
+
+vim.api.nvim_create_autocmd("BufWritePost", {
+  callback = function(args)
+    if vim.bo.modified then
+      write_failed = true
+    end
+
+    if not write_failed then
+      vim.notify("✅ Saved: " .. args.file)
+    else
+      vim.notify("❌ Error Saving: " .. args.file, vim.log.levels.ERROR)
+    end
+  end,
+})

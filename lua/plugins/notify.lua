@@ -5,10 +5,10 @@ return {
     local notify = require("notify")
 
     notify.setup({
-      stages = "fade_in_slide_out",
+      stages = "slide",
       timeout = 3000,
       background_colour = "#000000",
-      fps = 80,
+      fps = 70,
       render = "default",
       max_width = math.floor(vim.api.nvim_win_get_width(0) / 2),
       max_height = math.floor(vim.api.nvim_win_get_height(0) / 4),

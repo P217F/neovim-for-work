@@ -3,13 +3,9 @@
 -- Change bufferworspace
 vim.keymap.set("n", "<C-z>", "<C-w>", { noremap = true })
 vim.keymap.set("n", "<C-z>", "<nop>")
-vim.keymap.set("t", "<C-z>", "<C-\\><C-n><C-w>", { noremap = true })
 
 -- Function - Class - Variable
 vim.keymap.set("n", "<F1>", "<cmd>AerialToggle!<CR>", { noremap=true, silent=true })
-
--- Search text
-vim.keymap.set('n', '<F2>', '/', { noremap=true, silent=true })
 
 -- NvimTree && Telescope
 vim.keymap.set('n', '<F3>', ':Telescope find_files<CR>', { noremap=true, silent=true })
@@ -36,8 +32,8 @@ for i = 1, 9 do
 end
 
 -- Resize bufferworkspace
-vim.keymap.set('n', '<C-h>', '<cmd>vertical resize -1<CR>', { silent = true })
-vim.keymap.set('n', '<C-l>', '<cmd>vertical resize +1<CR>', { silent = true })
-vim.keymap.set('n', '<C-j>', '<cmd>resize +1<CR>', { silent = true })
-vim.keymap.set('n', '<C-k>', '<cmd>resize -1<CR>', { silent = true })
+vim.keymap.set('n', '<C-h>', '<CMD>vertical resize -1<CR>', { silent = true })
+vim.keymap.set('n', '<C-l>', '<CMD>vertical resize +1<CR>', { silent = true })
+vim.keymap.set('n', '<C-j>', '<CMD>resize +1<CR>', { silent = true })
+vim.keymap.set('n', '<C-k>', '<CMD>resize -1<CR>', { silent = true })
 

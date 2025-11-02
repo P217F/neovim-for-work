@@ -23,9 +23,9 @@ vim.opt.shortmess:append("sI")
 vim.opt.whichwrap:append("<,>,[,],h,l")
 vim.opt.laststatus = 3
 vim.opt.termguicolors = true
-vim.g.mapleader = " "
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+vim.g.mapleader = " "
 
 -- Saved notify
 local write_failed = false

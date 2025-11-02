@@ -9,7 +9,7 @@ return {
       sorter = "case_sensitive",
     },
     view = {
-      width = 26,
+      width = 28,
     },
     renderer = {
       group_empty = true,

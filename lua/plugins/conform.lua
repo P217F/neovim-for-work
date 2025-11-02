@@ -21,7 +21,7 @@ return {
     local conform = require("conform")
     conform.setup(opts)
 
-    vim.keymap.set("n", "<F12>", function()
+    vim.keymap.set("n", "<S-f>", function()
       conform.format({
         async = true,
         lsp_fallback = true,

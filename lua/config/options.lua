@@ -14,8 +14,8 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.incsearch = true
 vim.opt.hlsearch = true
-vim.opt.timeoutlen = 180
-vim.opt.updatetime = 20
+vim.opt.timeoutlen = 400
+vim.opt.updatetime = 180
 vim.opt.mouse = "a"
 vim.opt.clipboard = "unnamedplus"
 vim.opt.fillchars = { eob=" " }
@@ -34,7 +34,6 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     write_failed = false
   end,
 })
-
 vim.api.nvim_create_autocmd("BufWritePost", {
   callback = function(args)
     if vim.bo.modified then

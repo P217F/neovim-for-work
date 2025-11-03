@@ -1,31 +1,33 @@
 return {
   {
     "mfussenegger/nvim-dap",
-    lazy = true,
+    lazy = false,
     keys = {
       {
         "<F6>",
         function()
           require("lazy").load({ plugins = { "nvim-dap-ui" } })
           require("dap").continue()
-          vim.fn.sign_define('DapBreakpoint', { text = '●', texthl = 'DiagnosticError', linehl = '', numhl = '' })
-          vim.fn.sign_define('DapBreakpointCondition', { text = '◆', texthl = 'DiagnosticWarn', linehl = '', numhl = '' })
-          vim.fn.sign_define('DapBreakpointRejected', { text = '✗', texthl = 'DiagnosticError', linehl = '', numhl = '' })
-          vim.fn.sign_define('DapStopped', { text = '→', texthl = 'DiagnosticInfo', linehl = 'Visual', numhl = '' })
-          vim.fn.sign_define('DapLogPoint', { text = '◆', texthl = 'DiagnosticHint', linehl = '', numhl = '' })
         end,
         desc = "DAP: start/continue"
       },
     },
     config = function()
       local dap = require("dap")
+
+      vim.fn.sign_define('DapBreakpoint', { text = '●', texthl = 'DiagnosticError', linehl = '', numhl = '' })
+      vim.fn.sign_define('DapBreakpointCondition', { text = '◆', texthl = 'DiagnosticWarn', linehl = '', numhl = '' })
+      vim.fn.sign_define('DapBreakpointRejected', { text = '✗', texthl = 'DiagnosticError', linehl = '', numhl = '' })
+      vim.fn.sign_define('DapStopped', { text = '→', texthl = 'DiagnosticInfo', linehl = 'Visual', numhl = '' })
+      vim.fn.sign_define('DapLogPoint', { text = '◆', texthl = 'DiagnosticHint', linehl = '', numhl = '' })
+
       local opts = { noremap = true, silent = true }
 
-      -- ===== C/C++ with cpptools (GDB backend) =====
+      -- C/C++ with cpptools (GDB backend)
       dap.adapters.cppdbg = {
         id = 'cppdbg',
         type = 'executable',
-        command = '/path/to/cpptools/extension/debugAdapters/bin/OpenDebugAD7',
+        command = "OpenDebugAD7",
       }
 
       dap.configurations.cpp = {
@@ -38,6 +40,7 @@ return {
           end,
           cwd = '${workspaceFolder}',
           stopAtEntry = true,
+          justMyCode = false,
           setupCommands = {
             {
               text = '-enable-pretty-printing',
@@ -49,7 +52,7 @@ return {
       }
       dap.configurations.c = dap.configurations.cpp
 
-      -- ===== Python with debugpy + auto detect venv/conda =====
+      -- Python with debugpy + auto detect venv/conda
       dap.adapters.python = {
         type = 'executable',
         command = 'python',

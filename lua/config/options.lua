@@ -15,7 +15,7 @@ vim.opt.smartcase = true
 vim.opt.incsearch = true
 vim.opt.hlsearch = true
 vim.opt.timeoutlen = 400
-vim.opt.updatetime = 180
+vim.opt.updatetime = 160
 vim.opt.mouse = "a"
 vim.opt.clipboard = "unnamedplus"
 vim.opt.fillchars = { eob=" " }

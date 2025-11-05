@@ -13,13 +13,6 @@ return {
   config = function(_, opts)
     require("inc_rename").setup(opts)
 
-    vim.keymap.set("n", "<F11>", function()
-      return ":IncRename " .. vim.fn.expand("<cword>")
-    end, {
-      expr = true,
-      desc = "Rename symbol under cursor (LSP incremental rename)",
-    })
-
     vim.api.nvim_create_autocmd("User", {
       pattern = "IncRenameFinished",
       callback = function(ev)

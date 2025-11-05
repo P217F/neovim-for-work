@@ -11,9 +11,5 @@ return {
   },
   config = function(_, opts)
     require("trouble").setup(opts)
-    -- :TroubleToggle document_diagnostics
-    -- :TroubleToggle workspace_diagnostics
-    -- :TroubleToggle quickfix
-    -- :TroubleToggle lsp_references
   end,
 }

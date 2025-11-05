@@ -31,7 +31,6 @@ return {
         },
       },
     })
-
     local builtin = require("telescope.builtin")
   end,
 }

@@ -13,7 +13,7 @@ return {
   config = function(_, opts)
     require("inc_rename").setup(opts)
 
-    vim.keymap.set("n", "<F2>", function()
+    vim.keymap.set("n", "<F11>", function()
       return ":IncRename " .. vim.fn.expand("<cword>")
     end, {
       expr = true,

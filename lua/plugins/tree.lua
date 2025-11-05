@@ -1,7 +1,6 @@
 return {
   "nvim-tree/nvim-tree.lua",
   version = "*",
-
   cmd = { "NvimTreeToggle", "NvimTreeFocus" },
 
   opts = {

@@ -11,12 +11,6 @@ return {
       bash = { "shfmt" },
       zsh = { "shfmt" },
     },
-    format_on_save = function(bufnr)
-      return {
-        timeout_ms = 1000,
-        lsp_fallback = true,
-      }
-    end,
   },
   config = function(_, opts)
     local conform = require("conform")

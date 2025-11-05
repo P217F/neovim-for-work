@@ -32,15 +32,17 @@ return {
     require('lualine').setup {
       options = {
         theme = bubbles_theme,
-        component_separators = '',
+        component_separators = { left = '', right = '' },
+        section_separators = { left = '', right = '' },
+        globalstatus = true
       },
       sections = {
+        lualine_a = { 'mode' },
         lualine_b = { 'filename', 'branch' },
-        lualine_c = {
-          '%=',
-        },
+        lualine_c = { '%=' },
         lualine_x = {},
         lualine_y = { 'filetype', 'progress' },
+        lualine_z = { 'location' },
       },
       inactive_sections = {
         lualine_a = { 'filename' },
@@ -50,9 +52,6 @@ return {
         lualine_y = {},
         lualine_z = { 'location' },
       },
-      tabline = {},
-      extensions = {},
     }
   end,
 }
-

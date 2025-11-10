@@ -26,6 +26,7 @@ vim.opt.termguicolors = true
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.g.mapleader = " "
+vim.o.cursorline = true
 
 -- Saved notify
 local write_failed = false

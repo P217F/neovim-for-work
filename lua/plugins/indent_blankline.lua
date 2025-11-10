@@ -6,7 +6,6 @@ return {
     indent = {
       char = "│",
       tab_char = "│",
-      -- highlight = { "RainbowRed", "RainbowYellow", ... }
     },
     scope = {
       enabled = false,

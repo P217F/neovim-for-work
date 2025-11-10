@@ -14,7 +14,7 @@ return {
         end,
         color_icons = true,
         themeable = true,
-        separator_style = "slant",
+        separator_style = "thin",
         show_buffer_icons = true,
         show_close_icon = true,
         show_tab_indicators = true,

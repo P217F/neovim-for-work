@@ -1,4 +1,4 @@
-Notes: Config dotfiles at https://githb.com/P217F/neovim-for-work.git
+Notes: Config dotfiles at https://github.com/P217F/neovim-for-work.git
 
 +) Keymaps set in normal mode:
 F1: open telescope find_files

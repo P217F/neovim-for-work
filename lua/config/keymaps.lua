@@ -1,4 +1,4 @@
--- Inital config
+-- Initial config
 vim.keymap.set('n', 'q', ':q<CR>', { noremap=true, silent=true })
 vim.keymap.set('n', 'qq', ':q!<CR>', { noremap=true, silent=true })
 vim.keymap.set('n', '<C-Left>', '<CMD>vertical resize -1<CR>', { silent = true })
@@ -9,6 +9,7 @@ vim.keymap.set('n', '<C-h>', '<C-w>h', { noremap=true, silent=true })
 vim.keymap.set('n', '<C-j>', '<C-w>j', { noremap=true, silent=true })
 vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap=true, silent=true })
 vim.keymap.set('n', '<C-l>', '<C-w>l', { noremap=true, silent=true })
+vim.api.nvim_set_keymap('n', '<Esc>', ':noh<CR><Esc>', { noremap = true, silent = true })
 
 -- Advanced config
 vim.keymap.set('n', '<F1>', ':Telescope find_files<CR>', { noremap=true, silent=true })

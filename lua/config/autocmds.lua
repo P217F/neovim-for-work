@@ -4,16 +4,6 @@ local function set_transparent()
     hi CursorLineNr guibg=NONE ctermbg=NONE
     hi LineNr guibg=NONE ctermbg=NONE
     hi SignColumn guibg=NONE ctermbg=NONE
-    hi GitSignsAdd guibg=NONE ctermbg=NONE
-    hi GitSignsChange guibg=NONE ctermbg=NONE
-    hi GitSignsDelete guibg=NONE ctermbg=NONE
-    hi Pmenu guibg=NONE ctermbg=NONE
-    hi PmenuThumb guibg=NONE ctermbg=NONE
-    hi PmenuSbar guibg=NONE ctermbg=NONE
-    hi CmpItemAbbrMatch guibg=NONE ctermbg=NONE
-    hi CmpItemAbbrMatchFuzzy guibg=NONE ctermbg=NONE
-    hi CmpItemKind guibg=NONE ctermbg=NONE
-    hi PmenuSel guibg=#458588 guifg=#ebdbb2 ctermbg=66 ctermfg=223
   ]]
 end
 

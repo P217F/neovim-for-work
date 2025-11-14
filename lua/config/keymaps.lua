@@ -1,4 +1,4 @@
--- Initial config
+-- Inital config
 vim.keymap.set('n', 'q', ':q<CR>', { noremap=true, silent=true })
 vim.keymap.set('n', 'qq', ':q!<CR>', { noremap=true, silent=true })
 vim.keymap.set('n', '<C-Left>', '<CMD>vertical resize -1<CR>', { silent = true })

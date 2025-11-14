@@ -7,16 +7,9 @@ return {
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
       local on_attach = function(client, bufnr) end
 
-      local jdtls = require("plugins.lsp.jdtls")
       local clangd = require("plugins.lsp.clangd")
       local pyright = require("plugins.lsp.pyright")
-
-      vim.api.nvim_create_autocmd("FileType", {
-        pattern = "java",
-        callback = function()
-          jdtls.setup(on_attach, capabilities)
-        end,
-      })
+      local tsserver = require("plugins.lsp.tsserver")
 
       vim.api.nvim_create_autocmd("FileType", {
         pattern = { "c", "cpp", "h", "objc", "objcpp", "hpp" },
@@ -30,6 +23,13 @@ return {
         callback = function()
           pyright.setup(on_attach, capabilities)
         end,
+      })
+
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+        callback = function()
+          tsserver.setup(on_attach, capabilities)
+      end,
       })
 
       vim.api.nvim_create_autocmd("CursorHold", {

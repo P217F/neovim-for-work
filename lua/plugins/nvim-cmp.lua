@@ -9,6 +9,34 @@ return {
   config = function()
     local cmp = require('cmp')
 
+    local kind_icons = {
+      Text = "",
+      Method = "󰆧",
+      Function = "󰡱",
+      Constructor = "",
+      Field = "󰜢",
+      Variable = "󰀫",
+      Class = "",
+      Interface = "",
+      Module = "󰕳",
+      Property = "",
+      Unit = "",
+      Value = "󰎠",
+      Enum = "",
+      Keyword = "󰌋",
+      Snippet = "󰘍",
+      Color = "",
+      File = "󰈙",
+      Reference = "",
+      Folder = "󰉋",
+      EnumMember = "",
+      Constant = "󰏿",
+      Struct = "󰙅",
+      Event = "",
+      Operator = "󰆕",
+      TypeParameter = "",
+    }
+
     cmp.setup({
       snippet = {
         expand = function(args)
@@ -20,14 +48,18 @@ return {
         ['<Down>'] = cmp.mapping.select_next_item(),
         ['<Up>']   = cmp.mapping.select_prev_item(),
       }),
+      formatting = {
+        format = function(entry, item)
+          item.kind = (kind_icons[item.kind] or "") .. " " .. item.kind
+          return item
+        end,
+      },
       sources = cmp.config.sources({
         { name = 'nvim_lsp' },
         { name = 'buffer' },
         { name = 'path' },
         { name = 'luasnip' },
-        { name = 'treesitter '},
       })
     })
   end,
 }
-

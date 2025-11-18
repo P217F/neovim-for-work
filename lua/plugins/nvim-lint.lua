@@ -13,8 +13,6 @@ return {
 
     lint.linters_by_ft = {
       python = {"flake8"},       -- Python
-      c = {"clang-tidy"},        -- C
-      cpp = {"clang-tidy"},      -- C++
       javascript = {"eslint"}    -- JS
     }
   end

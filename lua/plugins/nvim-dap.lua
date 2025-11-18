@@ -1,27 +1,17 @@
 return {
   {
     "mfussenegger/nvim-dap",
-    lazy = true,
-    keys = {
-      {
-        "<F9>",
-        function()
-          require("lazy").load({ plugins = { "nvim-dap-ui" } })
-          require("dap").continue()
-          vim.fn.sign_define('DapBreakpoint', { text = '●', texthl = 'DiagnosticError', linehl = '', numhl = '' })
-          vim.fn.sign_define('DapBreakpointCondition', { text = '◆', texthl = 'DiagnosticWarn', linehl = '', numhl = '' })
-          vim.fn.sign_define('DapBreakpointRejected', { text = '✗', texthl = 'DiagnosticError', linehl = '', numhl = '' })
-          vim.fn.sign_define('DapStopped', { text = '→', texthl = 'DiagnosticInfo', linehl = 'Visual', numhl = '' })
-          vim.fn.sign_define('DapLogPoint', { text = '◆', texthl = 'DiagnosticHint', linehl = '', numhl = '' })
-        end,
-        desc = "DAP: start/continue"
-      },
-    },
+    lazy = false,
     config = function()
       local dap = require("dap")
       local opts = { noremap = true, silent = true }
 
-      -- ===== C/C++ with cpptools (GDB backend) =====
+      vim.fn.sign_define('DapBreakpoint',         { text = '●', texthl = 'DiagnosticError' })
+      vim.fn.sign_define('DapBreakpointCondition',{ text = '◆', texthl = 'DiagnosticWarn' })
+      vim.fn.sign_define('DapBreakpointRejected', { text = '✗', texthl = 'DiagnosticError' })
+      vim.fn.sign_define('DapStopped',            { text = '→', texthl = 'DiagnosticInfo', linehl = 'Visual' })
+      vim.fn.sign_define('DapLogPoint',           { text = '◆', texthl = 'DiagnosticHint' })
+
       dap.adapters.cppdbg = {
         id = 'cppdbg',
         type = 'executable',
@@ -49,7 +39,6 @@ return {
       }
       dap.configurations.c = dap.configurations.cpp
 
-      -- ===== Python with debugpy + auto detect venv/conda =====
       dap.adapters.python = {
         type = 'executable',
         command = 'python',
@@ -78,7 +67,11 @@ return {
       vim.api.nvim_set_keymap("n", "<F11>", '<Cmd>lua require"dap".step_into()<CR>', opts)
       vim.api.nvim_set_keymap("n", "<F12>", '<Cmd>lua require"dap".step_out()<CR>', opts)
       vim.api.nvim_set_keymap("n", "<leader>t", '<Cmd>lua require"dap".terminate()<CR>', opts)
-      vim.api.nvim_set_keymap("n", "<leader>r", '<Cmd>lua require"dap".step_out()<CR>', opts)
+
+      vim.keymap.set("n", "<F9>", function()
+        require("lazy").load({ plugins = { "nvim-dap-ui" } })
+        require("dap").continue()
+      end, { desc = "DAP: start/continue" })
     end
   },
 

@@ -1,6 +1,7 @@
 return {
   "stevearc/aerial.nvim",
   event = "VeryLazy",
+
   config = function()
     require("aerial").setup({
       backends = { "lsp", "treesitter" },
@@ -15,6 +16,11 @@ return {
         Variable = "",
       },
     })
+
+    vim.keymap.set("n", "<F8>", "<cmd>AerialToggle!<CR>", {
+      noremap = true,
+      silent = true,
+      desc = "Toggle Aerial outline",
+    })
   end,
 }
-

@@ -16,13 +16,5 @@ vim.api.nvim_set_keymap('n', '<C-y>', '<C-r>', { noremap = true, silent = true }
 vim.api.nvim_set_keymap('i', '<C-y>', '<Esc><C-r>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<C-y>', '<Esc><C-r>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Esc>', ':noh<CR><Esc>', { noremap = true, silent = true })
-
--- Advanced config
-vim.keymap.set('n', '<F1>', ':Telescope find_files<CR>', { noremap=true, silent=true })
-vim.keymap.set('n', '<F2>', ':Telescope live_grep<CR>', { noremap=true, silent=true })
-vim.keymap.set('n', '<F3>', ':Telescope oldfiles<CR>', { noremap=true, silent=true })
-vim.keymap.set('n', '<F4>', ':NvimTreeToggle<CR>', { noremap=true, silent=true })
 vim.keymap.set('n', '<F5>', ':sp<CR>', { noremap=true, silent=true })
 vim.keymap.set('n', '<F6>', ':vs<CR>', { noremap=true, silent=true })
-vim.keymap.set("n", "<F7>", function() return ":IncRename " .. vim.fn.expand("<cword>") end, { expr = true })
-vim.keymap.set("n", "<F8>", "<cmd>AerialToggle!<CR>", { noremap=true, silent=true })

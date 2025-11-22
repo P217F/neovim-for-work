@@ -6,7 +6,7 @@ return {
 
   opts = {
     sort = { sorter = "case_sensitive" },
-    view = { width = 25 },
+    view = { width = 24 },
     renderer = {
       group_empty = true,
       indent_markers = { enable = true },

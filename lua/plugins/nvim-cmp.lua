@@ -5,6 +5,7 @@ return {
     "L3MON4D3/LuaSnip",
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-path",
+    "hrsh7th/cmp-cmdline",
   },
   config = function()
     local cmp = require('cmp')
@@ -60,6 +61,21 @@ return {
         { name = 'path' },
         { name = 'luasnip' },
       })
+    })
+
+    cmp.setup.cmdline(':', {
+      mapping = cmp.mapping.preset.cmdline(),
+      sources = {
+        { name = 'path' },    -- file paths
+        { name = 'cmdline' }, -- vim commands
+      }
+    })
+
+    cmp.setup.cmdline({'/', '?'}, {
+      mapping = cmp.mapping.preset.cmdline(),
+      sources = {
+        { name = 'buffer' }, -- search in current buffer
+      }
     })
   end,
 }

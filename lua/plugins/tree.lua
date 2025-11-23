@@ -6,7 +6,7 @@ return {
 
   opts = {
     sort = { sorter = "case_sensitive" },
-    view = { width = 24 },
+    view = { width = 24, float = { enable = false } },
     renderer = {
       group_empty = true,
       indent_markers = { enable = true },
@@ -22,6 +22,15 @@ return {
     filters = {
       dotfiles = false,
       git_ignored = false,
+    },
+    actions = {
+      open_file = {
+        quit_on_open = false,
+        resize_window = true,
+        window_picker = {
+          enable = false,
+        },
+      },
     },
   },
 

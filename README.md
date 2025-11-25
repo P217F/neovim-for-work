@@ -1,12 +1,9 @@
 # neovim-for-work
-This is an dotfiles repo for neovim  
+This is an dotfiles repo for neovim, default support for Python,C,C++,Javascript  
 
 ## Installation
 - Cloning to ~/.config/nvim: git clone https://github.com/P217F/neovim-for-work ~/.config/nvim  
 - Open neovim and using it  
-
-## Waning
-If you using Linux/MacOS, you must run build.sh from ~/.local/share/nvim/lazy/avante.nvim/, and in Windows is ~/AppData/Local/nvim-data/avante.nvim/. And if you want to use Avante, you must choose your Model and have an API Key, add it in Environment Variables(Linux/MacOS: ~/.zshrc or ~/.bashrc, Windows: SystemPropretiesAdvanced or set manually in Powershell)  
 
 ### Requirements:
 - clangd

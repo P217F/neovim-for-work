@@ -28,6 +28,8 @@ gn,gp: next hunk, previous hunk
 <leader>: show keymap list
 <leader>pp: open telescope of project
 <leader>pc: set current directory to root project
+gd: Go to definition
+K: Show mini windows of definition information
 ]f: jump to head of next function
 ]c: jump to head of next class
 [f: jump to head of previous function

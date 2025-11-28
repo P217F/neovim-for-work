@@ -1,6 +1,6 @@
-Notes: Config dotfiles at https://github.com/P217F/neovim-for-work.git
+**Notes: Config dotfiles at https://github.com/P217F/neovim-for-work.git**
 
-Keymaps set in normal mode:
+- Keymaps set in normal mode:
 F1: open telescope find_files
 F2: open telescope live_grep
 F3: open telescope oldfiles
@@ -36,8 +36,11 @@ K: Show mini windows of definition information
 [c: jump to head of previous class
 >a: swap with next parameter
 <a: swap with previous parameter
+daw: delete a word int cursor
+di(: delete all in (*)
+>, <: indent, delete indent
 
-Keymaps set in visual mode:
+- Keymaps set in visual mode:
 af: select all function
 if: select inner function
 ac: select all class

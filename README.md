@@ -6,6 +6,7 @@ This is an dotfiles repo for neovim, default support for Python,C,C++,Javascript
 - Open neovim and using it  
 
 ### Requirements:
+- git
 - clangd
 - OpenDebugAD7(providing by cpptools or using another debugger if you like)
 - pyright
@@ -15,3 +16,4 @@ This is an dotfiles repo for neovim, default support for Python,C,C++,Javascript
 - typescript-language-server
 - eslint
 - npm
+

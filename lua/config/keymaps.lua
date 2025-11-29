@@ -5,10 +5,10 @@ vim.keymap.set('n', 'q', ':q<CR>', { noremap=true, silent=true })
 vim.keymap.set('n', 'qq', ':q!<CR>', { noremap=true, silent=true })
 
 -- Resize workspace split
-vim.keymap.set('n', '<C-Left>', '<CMD>vertical resize -0.1<CR>', { silent = true })
-vim.keymap.set('n', '<C-Right>', '<CMD>vertical resize +0.1<CR>', { silent = true })
-vim.keymap.set('n', '<C-Down>', '<CMD>resize +0.1<CR>', { silent = true })
-vim.keymap.set('n', '<C-Up>', '<CMD>resize -0.1<CR>', { silent = true })
+vim.keymap.set('n', '<C-Left>', '<CMD>vertical resize -1<CR>', { silent = true })
+vim.keymap.set('n', '<C-Right>', '<CMD>vertical resize +1<CR>', { silent = true })
+vim.keymap.set('n', '<C-Down>', '<CMD>resize +1<CR>', { silent = true })
+vim.keymap.set('n', '<C-Up>', '<CMD>resize -1<CR>', { silent = true })
 
 -- Move to workspace split
 vim.keymap.set('n', '<C-h>', '<C-w>h', { noremap=true, silent=true })

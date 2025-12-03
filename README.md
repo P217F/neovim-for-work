@@ -7,13 +7,12 @@ This is an dotfiles repo for neovim, default support for Python,C,C++,Javascript
 
 ### Requirements:
 - git
-- clangd
+- clangd(LSP for C/C++)
 - OpenDebugAD7(providing by cpptools or using another debugger if you like)
-- pyright
+- pyright(LSP for Python)
 - debugpy(require virtual environment python)
 - flake8(require virtual environment python)
 - pytest(require virtual environment python)
-- typescript-language-server
-- eslint
-- npm
-
+- typescript-language-server(LSP for Javascript)
+- eslint(Lint for Javascript)
+- npm(Package manager and Tester for Javascript)

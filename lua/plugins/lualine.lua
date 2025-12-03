@@ -37,7 +37,7 @@ return {
         icons_enabled = true,
       },
       sections = {
-        lualine_a = { { "mode", icon = "" } },
+        lualine_a = { { "mode", icon = "" } },
         lualine_b = {
           "branch",
           { "filename", file_status = true, path = 1, color = { bg = colors.grey }, gui = "bold" },

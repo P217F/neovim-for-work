@@ -62,8 +62,5 @@ return {
     vim.keymap.set("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", { silent = true, noremap = true })
     vim.keymap.set("n", "bd", "<cmd>bdelete<CR>", { silent = true, noremap = true })
     vim.keymap.set("n", "bdd", "<cmd>bdelete!<CR>", { silent = true, noremap = true })
-    for i = 1, 9 do
-        vim.keymap.set("n", "<leader>" .. i, "<cmd>BufferLineGoToBuffer " .. i .. "<CR>")
-    end
   end,
 }

@@ -3,11 +3,11 @@ return {
   opts = {
     window = {
       backdrop = 0.90,
-      width = 0.85,
-      height = 1,
+      width = 0.95,
+      height = 0.95,
       options = {
-        signcolumn = "no",
-        number = false,
+        signcolumn = "yes",
+        number = true,
         relativenumber = false,
         foldcolumn = "0",
         cursorline = false,

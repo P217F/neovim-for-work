@@ -6,7 +6,7 @@ return {
     },
     cmd = "Neogit",
     keys = {
-        { "<leader>g", "<cmd>Neogit<CR>" },
+        { "gi", "<cmd>Neogit<CR>" },
     },
     config = function()
         require("neogit").setup({

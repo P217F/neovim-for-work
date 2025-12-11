@@ -8,7 +8,7 @@ This is an dotfiles repo for neovim, default support for Python,C,C++,Javascript
 ### Requirements:
 - git
 - clangd(LSP for C/C++)
-- OpenDebugAD7(providing by cpptools or using another debugger if you like)
+- codelldb(recommend for stable and unconflict with cpptools(OpenDebugAD7))
 - pyright(LSP for Python)
 - debugpy(require virtual environment python)
 - pytest(require virtual environment python)
